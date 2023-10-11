@@ -1,0 +1,13 @@
+{
+  "material-icon-theme.folders.associations": {
+    "adapters": "pipe",
+    "external": "tools",
+    "user": "admin",
+    "memory": "database",
+    "repository": "queue",
+    "migrations": "upload",
+    "in_memory": "log",
+    "http": "api",
+    "use_cases": "rules"
+  }
+}
