@@ -1,0 +1,14 @@
+version: "3,7"
+
+services:
+  db-postgres:
+    image: bitnami/postgresql
+    ports:
+      - 5432:5432
+    env_file:
+      - .env
+    # configurar a string de conexão com o banco postgres a partir no arquivo .env
+    environment:
+      - POSTGRESQL_USERNAME= ${POSTGRESQL_USERNAME}
+      - POSTGRESQL_PASSWORD= ${POSTGRESQL_PASSWORD}
+      - POSTGRESQL_DATABASE= ${POSTGRESQL_DATABASE}
