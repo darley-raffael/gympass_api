@@ -8,6 +8,7 @@
     "migrations": "upload",
     "in_memory": "log",
     "http": "api",
-    "use_cases": "rules"
+    "use_cases": "rules",
+    "repositories": "queue"
   }
 }
