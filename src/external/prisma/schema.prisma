@@ -13,30 +13,30 @@ enum Rule {
 }
 
 model User {
-  id         String   @id @default(uuid())
+  id         String    @id @default(uuid())
   name       String
-  email      String   @unique
+  email      String    @unique
   password   String
-  created_at DateTime @default(now())
-  rule       Rule     @default(MEMBER)
-  ChekIn     ChekIn[]
+  created_at DateTime  @default(now())
+  rule       Rule      @default(MEMBER)
+  CheckIn    CheckIn[]
 
   @@map("users")
 }
 
 model Gym {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   title       String
   description String?
   phone       String?
   latitude    Decimal
   longitude   Decimal
-  ChekIn      ChekIn[]
+  CheckIn     CheckIn[]
 
   @@map("gyms")
 }
 
-model ChekIn {
+model CheckIn {
   id           String    @id @default(uuid())
   created_at   DateTime  @default(now())
   validated_at DateTime?
