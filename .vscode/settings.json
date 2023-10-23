@@ -11,5 +11,5 @@
     "use_cases": "rules",
     "repositories": "queue"
   },
-  "cSpell.words": ["dayjs", "fastify"]
+  "cSpell.words": ["checkins", "dayjs", "fastify"]
 }
