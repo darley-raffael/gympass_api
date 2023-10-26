@@ -25,5 +25,4 @@ export class SearchGymsUseCase {
     return { gyms };
   }
 
-
 }
