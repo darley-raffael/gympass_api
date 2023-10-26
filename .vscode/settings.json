@@ -1,4 +1,7 @@
 {
+  "material-icon-theme.files.associations": {
+    "routes.ts": "routing"
+  },
   "material-icon-theme.folders.associations": {
     "adapters": "pipe",
     "external": "tools",
