@@ -14,5 +14,8 @@
     "use_cases": "rules",
     "repositories": "queue"
   },
-  "cSpell.words": ["checkins", "dayjs", "fastify"]
+  "cSpell.words": ["checkins", "dayjs", "fastify"],
+  "files.associations": {
+    ".tool-versions": "properties"
+  }
 }
