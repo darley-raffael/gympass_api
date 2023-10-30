@@ -26,4 +26,4 @@ jobs:
       - run: npm run test:e2e
         env:
           JWT_SECRET: ${JWT_SECRET}
-          DATABASE_URL: postgres://${POSTGRESQL_USERNAME}:${POSTGRESQL_PASSWORD}@localhost:5432/${POSTGRESQL_DATABASE}?schema=public
+          DATABASE_URL: postgresql://dr_admin:dr_admin123@localhost:5432/gympass_db?schema=public
