@@ -14,5 +14,5 @@ export async function validate(request: FastifyRequest, reply: FastifyReply) {
     checkInId,
   });
 
-  return reply.status(200).send();
+  return reply.status(204).send();
 }
