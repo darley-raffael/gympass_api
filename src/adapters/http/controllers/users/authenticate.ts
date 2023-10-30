@@ -27,7 +27,22 @@ export async function authenticate(
       }
     );
 
-    return reply.status(201).send({ token });
+    const refreshToken = await reply.jwtSign(
+      {},
+      {
+        sign: { sub: user.id, expiresIn: "7d" },
+      }
+    );
+
+    return reply
+      .setCookie("refreshToken", refreshToken, {
+        path: "/",
+        secure: true,
+        sameSite: true,
+        httpOnly: true,
+      })
+      .status(201)
+      .send({ token });
   } catch (err) {
     if (err instanceof InvalidCredentialError) {
       return reply.status(400).send({

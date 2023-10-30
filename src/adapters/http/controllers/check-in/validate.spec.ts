@@ -32,20 +32,17 @@ describe("Validate Check-in (e2e)", () => {
         user_id: user.id,
       },
     });
-    console.log("before 1", checkIn);
     const response = await request(app.server)
       .patch(`/check-ins/${checkIn.id}/validate`)
       .set("Authorization", `Bearer ${token}`)
       .send();
 
     expect(response.statusCode).toEqual(204);
-    console.log("Before", checkIn);
     checkIn = await prisma.checkIn.findUniqueOrThrow({
       where: {
         id: checkIn.id,
       },
     });
-    console.log(checkIn);
     expect(checkIn.validated_at).toEqual(expect.any(Date));
   });
 });
